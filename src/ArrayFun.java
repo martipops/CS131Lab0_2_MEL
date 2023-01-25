@@ -4,15 +4,27 @@
  * methods forward backward and sum use this array
  */
 public class ArrayFun {
-    // Creates a square array of size SQUARE_COUNT
-    final private int SQUARE_COUNT = 6;
-    Square[] myArray = new Square[SQUARE_COUNT];
+    // initializes a private for number of squares
+    final private int SQUARE_COUNT;
+    Square[] myArray;
 
     /**
-     * Create a Square[] array of size 6 with side lengths corresponding
-     * to their index
+     * Create a Square[] array of default size 6 with side lengths corresponding
+     * to their index. Uses constructor chaining for ease of use.
      */
     public ArrayFun() {
+        this(6);
+    }
+
+    /**
+     * Create a Square[] array of a custom size with side lengths corresponding
+     * to their index
+     * 
+     * @param sqCount the amount of squares in the array
+     */
+    public ArrayFun(int sqCount) {
+        SQUARE_COUNT = sqCount;
+        myArray = new Square[SQUARE_COUNT];
         for (int i = 0; i < SQUARE_COUNT; i++)
             myArray[i] = new Square(i);
     }

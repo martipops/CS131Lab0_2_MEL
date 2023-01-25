@@ -1,2 +1,2 @@
 .vsc*
-/src/*.class
+bin/*

@@ -9,13 +9,13 @@
  *          Spring-2023
  */
 public class Application {
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
         // Creates ArrayFun with default size of 6
         ArrayFun squareArray = new ArrayFun();
         squareArray.forward();
         squareArray.backward();
         squareArray.sum();
-        // Creates ArrayFun of size 20
+        // Creates ArrayFun of size 20 and prints sum
         ArrayFun squareArray2 = new ArrayFun(20);
         squareArray2.sum();
 

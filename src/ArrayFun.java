@@ -5,7 +5,7 @@
  */
 public class ArrayFun {
     // initializes a private for number of squares
-    final private int SQUARE_COUNT;
+    private int SQUARE_COUNT;
     Square[] myArray;
 
     /**
@@ -30,6 +30,26 @@ public class ArrayFun {
     }
 
     /**
+     * Gets a square at a specified index
+     * 
+     * @param i the index of the square to get
+     * @return Square type
+     */
+    public Square getArrayItem(int i) {
+        return myArray[i];
+    }
+
+    /**
+     * Sets an square at a specified index
+     * 
+     * @param s the Square to set at an index
+     * @param i the index of the item to set
+     */
+    public void setArrayItem(Square s, int i) {
+        myArray[i] = s;
+    }
+
+    /**
      * Iterates through each Square and prints out their areas
      * in ASCENDING order
      */
@@ -43,7 +63,7 @@ public class ArrayFun {
      * in DESCENDING order
      */
     public void backward() {
-        for (int i = SQUARE_COUNT; i > 0; i--)
+        for (int i = SQUARE_COUNT - 1; i > 0; i--)
             System.out.println("Square " + i + " area: " + myArray[i].area());
     }
 
